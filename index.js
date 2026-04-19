@@ -1,10 +1,13 @@
 // Por favor, antes de executar, atribui um valor na variável xp, para que o programa possa calcular o nível do usuário e exibir a mensagem correta.
+let nome = "Em busca de ser um desenvolvedor"
+
+    console.log("Bem Vindo " + nome + " ao nosso programa de níveis, aqui você pode acompanhar seu progresso e ver qual é o seu nível atual, baseado na sua experiência (XP).")  
 
 let xp = 0
 let nv = ""
 
 
-if (xp == 1) {
+if (xp <= 1) {
     nv = "Iniciante"
 } else if (xp <= 1000) {
     nv = "Ferro"
@@ -24,9 +27,6 @@ if (xp == 1) {
     nv = "RADIANTE"
 }
 
-let nome = "Em busca de ser um desenvolvedor"
-
-console.log("Olá, seja Bem Vindo: " + nome)
 console.log("Sua experiencia é: " + xp)
 console.log("Seu nével atual é: " + nv)
 
@@ -60,3 +60,10 @@ switch (nv) {
     break;
 
 }
+ for (let i = 500; i <= xp; i+=500) {
+    console.log("Parabéns, você ganhou " + i + " de XP, de pouco em pouco você vai chegar no próximo nível!")
+ }
+
+
+const mensagem = "Obrigado por participar do nosso programa, esperamos que tenha gostado!"
+console.log(mensagem)
