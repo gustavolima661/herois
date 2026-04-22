@@ -4,7 +4,7 @@ let nome = "Em busca de ser um desenvolvedor"
     console.log("Bem Vindo " + nome + " ao nosso programa de níveis, aqui você pode acompanhar seu progresso e ver qual é o seu nível atual, baseado na sua experiência (XP).")  
 
 let xp = 0
-let nv = ""
+var nv = ""
 
 
 if (xp <= 1) {
@@ -66,4 +66,28 @@ switch (nv) {
 
 
 const mensagem = "Obrigado por participar do nosso programa, esperamos que tenha gostado!"
+
+
+let estrutura = {
+    nv: {
+        0: ["Iniciante", "Rank F: Nível fundamental, manipulação elementar básica."], 
+        1: ["Ferro", "Rank E: Habilidades controladas, mas limitadas."],
+        2: ["Bronze", "Rank D: Despertar do poder elemental com pouca experiência."],
+        3: ["Prata", "Rank C: Controle sólido, habilidades aprimoradas."],
+        4: ["Ouro", "Rank B: Habilidades poderosas, controle avançado."],
+        5: ["Platina", "Rank A: Controle excepcional, habilidades devastadoras."],
+        6: ["Ascendente", "Rank S: Poder incomparável, controle absoluto."],
+        7: ["Imortal", "Rank S: Poder divino, controle supremo."],
+        8: ["RADIANTE", "Rank SSS: Poder transcendente, controle absoluto e imortalidade."]
+    }
+}
+
+estruturaElementar()
+function estruturaElementar() {
+    for (let i = 0; i < Object.keys(estrutura.nv).length; i++) {
+        if (estrutura.nv[i][0] === nv) {
+            console.log("Parabéns por ter alcançado o nível de " + estrutura.nv[i][0] + ", " + estrutura.nv[i][1])
+        }
+    }
+}
 console.log(mensagem)
